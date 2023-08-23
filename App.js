@@ -5,7 +5,7 @@ import MinMax from './MeuComponente';
 export default function App() {
   return (
     <View style={styles.container}>
-      <MinMax min = '10' max = '20'/>
+      <MinMax min = '20' max = '40'/>
       <StatusBar style="auto" />
     </View>
   );
