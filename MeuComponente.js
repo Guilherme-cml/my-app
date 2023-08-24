@@ -7,6 +7,6 @@ export default function MinMax(props){
  
     
     return (
-        <Text> O valor {max} é maior que {min} </Text>
+        <Text> Valor { parseInt(Math.random())} </Text>
     )
 }
