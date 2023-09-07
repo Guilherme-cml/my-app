@@ -20,11 +20,25 @@ export default function Biscoito(){
             setQuebrado(true);
         }
 
-    };
+};
     const reiniciarBiscoito = () => {
         setFrase("");
         setQuebrado(false);
     };
+    return (
+        <View style={styles.container}>{quebrado ? (<Image source={require("./assets/biscoitoInteiro.png")} style={styles.image}/>):(<Image style={styles.image} source={require("./assets/biscoitoQuebrado.png")}/>)})
+        <View style = {styles.container}>  <Text style = {styles.texto}>{frase}</Text>     </View>
+        <TouchableOpacity style={styles.botao} onPress={quebrarBiscoito} disabled={quebrado}>
+            <Text style={styles.botaoTexto}>Quebrar Biscoito</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.botao} onPress={reiniciarBiscoito} disabled={!quebrado}>
+            <Text style={styles.botaoTexto}>Reiniciar Biscoito</Text>
+        </TouchableOpacity>
+    </View>);
     
 
 }
+
+const styles = StyleSheet.create({
+    
+})
